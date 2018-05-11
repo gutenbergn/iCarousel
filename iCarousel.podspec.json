@@ -19,6 +19,7 @@
   "frameworks": "QuartzCore",
   "platforms": {
     "ios": "4.3",
+    "tvos": "10.0",
     "osx": "10.6"
   }
 }
