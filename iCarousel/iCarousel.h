@@ -119,7 +119,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, getter = isVertical) BOOL vertical;
 @property (nonatomic, readonly, getter = isWrapEnabled) BOOL wrapEnabled;
 @property (nonatomic, assign) BOOL bounces;
+@property (nonatomic, assign) BOOL shouldLoadAllItems;
 @property (nonatomic, assign) CGFloat scrollOffset;
+@property (nonatomic, assign) CGFloat cycleDuration;
 @property (nonatomic, readonly) CGFloat offsetMultiplier;
 @property (nonatomic, assign) CGSize contentOffset;
 @property (nonatomic, assign) CGSize viewpointOffset;
