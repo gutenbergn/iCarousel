@@ -21,7 +21,11 @@ let package = Package(
         .target(
             name: "iCarousel",
             dependencies: [],
-            path: "iCarousel"
+            path: "iCarousel",
+            publicHeadersPath: "Headers",
+            cSettings: [
+                .headerSearchPath("Headers")
+            ]
         ),
         //.testTarget(
         //    name: "FuzeUtilsTests",
