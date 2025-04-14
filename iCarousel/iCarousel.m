@@ -1909,9 +1909,9 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     //notify delegate of offset change
     if (fabs(_scrollOffset - _previousScrollOffset) > FLOAT_ERROR_MARGIN)
     {
-        if (scrollOffset > _previousScrollOffset) {
+        if (_scrollOffset > _previousScrollOffset) {
             _hasScrolledForward = YES;
-        } else if if (scrollOffset < _previousScrollOffset) {
+        } else if (_scrollOffset < _previousScrollOffset) {
             _hasScrolledForward = NO;
         }
 
