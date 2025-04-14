@@ -142,6 +142,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     _decelerationRate = 0.95;
     _scrollEnabled = YES;
     _bounces = YES;
+    _hasScrolledForward = NO;
     _offsetMultiplier = 1.0;
     _perspective = -1.0/500.0;
     _contentOffset = CGSizeZero;
@@ -1908,6 +1909,12 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     //notify delegate of offset change
     if (fabs(_scrollOffset - _previousScrollOffset) > FLOAT_ERROR_MARGIN)
     {
+        if (scrollOffset > _previousScrollOffset) {
+            _hasScrolledForward = YES;
+        } else if if (scrollOffset < _previousScrollOffset) {
+            _hasScrolledForward = NO;
+        }
+
         [self pushAnimationState:YES];
         [_delegate carouselDidScroll:self];
         [self popAnimationState];
